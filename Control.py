@@ -20,14 +20,19 @@ class Control:
                           "\n2. Subtrair"        +
                           "\n3. Dividir"         +
                           "\n4. Multiplicar"     +
-                          "\n5. "           +
-                          "\n6. "        +
-                          "\n7. "         +
-                          "\n8. "     +
-                          "\n9. "           +
+                          "\n5. Até Dez"           +
+                          "\n6. Números  pares de até 20"        +
+                          "\n7. Soma Cem "         +
+                          "\n8. Múltiplos de Cinco"     +
+                          "\n9. Par ou Impar?"           +
                           "\n10. Positivo, Negativo ou Zero?"+
                           "\n11. Tabuada"        +
                           "\n12. Até num"    +
+                         "\n13. Números primos 1 a 20" +
+                         "\n14. Verificar se o numero é primo" +
+                         "\n15. " +
+                         "\n16. " +
+                         "\n17. " +
                           "\nEscolha uma das opções acima:"))
 
     def operacao(self):
@@ -47,6 +52,18 @@ class Control:
             elif (self.opcao == 4):
                 self.coletar2()
                 print(self.exer.multiplicar())
+            elif (self.opcao == 5):
+                print(self.exer.ateDez())
+            elif (self.opcao == 6):
+                print(self.exer.pares())
+            elif(self.opcao == 7):
+                self.coletar2()
+                print(self.exer.somaCem())
+            elif(self.opcao == 8):
+                print(self.exer.multiplosCinco())
+            elif (self.opcao == 9):
+                self.coletar()
+                print(self.exer.parImpar())
             elif(self.opcao == 10):
                 self.coletar()
                 print(self.exer.PoNeZe())
@@ -56,5 +73,14 @@ class Control:
             elif (self.opcao == 12):
                 self.coletar()
                 print(self.exer.ateNum())
+            elif (self.opcao == 13):
+                self.coletar()
+                print(self.exer.primosUmAVinte())
+            elif(self.opcao == 14):
+                print(self.exer.primos())
+            elif (self.opcao == 15):
+                self.coletar()
+                print(self.exer.fatorial())
+
             else:
                 print("Código escolhido não é valido!")

@@ -19,6 +19,32 @@ class Exercicios:
     def multiplicar(self):
         return f"{self.num1} * {self.num2} = {self.num1 * self.num2}"
 
+    def ateDez(self):
+        for i in range(0, 11, 1):
+            print(i)
+
+    def pares(self):
+        for i in range(0, 21, 2):
+            print(i)
+
+    def somaCem(self):
+       if (self.num1 > 100):
+           return f"Digite um número menor que CEM!"
+       if (self.num2 > 100):
+           return f"Digite um número menor que CEM!"
+       else:
+        print(f"A soma de {self.num1} + {self.num2} = {self.num1 + self.num2}")
+
+    def multiplosCinco(self):
+        for i in range(0,51,5):
+            print(i)
+
+    def parImpar(self):
+        if (self.num1 % 2 == 0):
+            return f"{self.num1} é PAR!"
+        else:
+            return f"{self.num1} é IMPAR!"
+
     def PoNeZe(self):
         #Num1
         if(self.num1 > 0):
@@ -44,4 +70,38 @@ class Exercicios:
     def ateNum(self):
         for i in range(1, self.num1, 1):
             print(i)
+
+    def primos(self):
+        if self.num1 <= 1:
+            return False
+        for i in range(2, int(self.num1 ** 0.5) + 1):
+            if self.num1 % i == 0:
+                return f"É Primo!"
+        return f"Não é Primo!"
+
+    def primosUmAVinte(self):
+        def eh_primo(numero):
+            if numero <= 1:
+                return False
+            for i in range(2, int(numero ** 0.5) + 1):
+                if numero % i == 0:
+                    return False
+            return True
+
+        primos = []
+        for i in range(1, 21):
+            if eh_primo(i):
+                primos.append(i)
+        print("Números primos de 1 a 20:", primos)
+
+    def fatorial(self):
+        if self.num1 < 0:
+            return "Não é possível calcular o fatorial de um número negativo."
+        elif self.num1 == 0:
+            return 1
+        else:
+            fatorial = 1
+            for i in range(1, self.num1 + 1):
+                fatorial *= i
+            return fatorial
 
