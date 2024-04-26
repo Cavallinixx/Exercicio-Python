@@ -97,11 +97,36 @@ class Exercicios:
     def fatorial(self):
         if self.num1 < 0:
             return "Não é possível calcular o fatorial de um número negativo."
-        elif self.num1 == 0:
-            return 1
         else:
             fatorial = 1
             for i in range(1, self.num1 + 1):
                 fatorial *= i
             return fatorial
+
+    def ehFibonacci(self):
+        a, b = 0, 1
+        while b < self.num1:
+            a, b = b, a + b
+        return b == self.num1
+
+        if ehFibonacci():
+            return f"{self.num1} está na sequência de Fibonacci."
+        else:
+            return f"{num1} não está na sequência de Fibonacci."
+
+    def somaDigitos(self):
+        soma = 0
+        while self.num1 > 0:
+            digito = self.num1 % 10
+            soma += digito
+            self.num1 //= 10
+        return soma
+
+        resultado = somaDigitos()
+        return f"A soma dos dígitos de {self.num1} é: {resultado}"
+
+
+
+
+
 

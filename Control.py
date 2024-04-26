@@ -30,8 +30,8 @@ class Control:
                           "\n12. Até num"    +
                          "\n13. Números primos 1 a 20" +
                          "\n14. Verificar se o numero é primo" +
-                         "\n15. " +
-                         "\n16. " +
+                         "\n15. Fatorial" +
+                         "\n16. Fibonacci" +
                          "\n17. " +
                           "\nEscolha uma das opções acima:"))
 
@@ -81,6 +81,12 @@ class Control:
             elif (self.opcao == 15):
                 self.coletar()
                 print(self.exer.fatorial())
+            elif (self.opcao == 16):
+                self.coletar()
+                print(self.exer.ehFibonacci())
+            elif (self.opcao == 17):
+                self.coletar()
+                print(self.exer.somaDigitos())
 
             else:
                 print("Código escolhido não é valido!")
