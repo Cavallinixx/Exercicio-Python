@@ -103,16 +103,16 @@ class Exercicios:
                 fatorial *= i
             return fatorial
 
-    def ehFibonacci(self):
+
+
+    def verificar_fibonacci(self):
         a, b = 0, 1
         while b < self.num1:
             a, b = b, a + b
-        return b == self.num1
-
-        if ehFibonacci():
-            return f"{self.num1} está na sequência de Fibonacci."
+        if b == self.num1:
+            print(f"{self.num1} está na sequência de Fibonacci.")
         else:
-            return f"{num1} não está na sequência de Fibonacci."
+            print(f"{self.num1} não está na sequência de Fibonacci.")
 
     def somaDigitos(self):
         soma = 0
@@ -124,6 +124,37 @@ class Exercicios:
 
         resultado = somaDigitos()
         return f"A soma dos dígitos de {self.num1} é: {resultado}"
+
+    def imprimirParEImpar(self):
+        print(f"Números pares até {self.num1}:")
+        for i in range(2, self.num1 + 1, 2):
+            print(i)
+
+        print(f"\nNúmeros ímpares até {self.num1}:")
+        for i in range(1, self.num1 + 1, 2):
+            print(i)
+
+
+    def primo(numero):
+
+        if numero <= 1:
+          return False
+        for i in range(2, int(numero ** 0.5) + 1):
+          if numero % i == 0:
+              return False
+        return True
+
+    print(f"Números primos até {num1}:")
+    for i in range(2, num1 + 1):
+            if primo(i):
+                print(i)
+
+
+
+
+
+
+
 
 
 

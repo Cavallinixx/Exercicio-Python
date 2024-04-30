@@ -31,8 +31,12 @@ class Control:
                          "\n13. Números primos 1 a 20" +
                          "\n14. Verificar se o numero é primo" +
                          "\n15. Fatorial" +
-                         "\n16. Fibonacci" +
-                         "\n17. " +
+                         "\n16. Fibonacci ate dez" +
+                         "\n17. Diz se é da sequência de fibonacci" +
+                         "\n18. Soma digitos" +
+                         "\n19. Imprimir par e impar " +
+                         "\n20. Numeros  primos " +
+                         "\n21. " +
                           "\nEscolha uma das opções acima:"))
 
     def operacao(self):
@@ -82,11 +86,18 @@ class Control:
                 self.coletar()
                 print(self.exer.fatorial())
             elif (self.opcao == 16):
-                self.coletar()
-                print(self.exer.ehFibonacci())
+                print(self.exer.pares())
             elif (self.opcao == 17):
                 self.coletar()
+                print(self.exer.verificar_fibonacci())
+            elif (self.opcao == 18):
+                self.coletar()
                 print(self.exer.somaDigitos())
-
+            elif (self.opcao == 19):
+                self.coletar()
+                print(self.exer.imprimirParEImpar())
+            elif (self.opcao == 20):
+                self.coletar()
+                print(self.exer.())
             else:
                 print("Código escolhido não é valido!")
